@@ -10,25 +10,28 @@ A través del uso de **MySQL** y **phpMyAdmin**, se facilita la gestión, consul
 ---
 
 ## 🧱 Estructura del Proyecto
-
+```bash
 database/
 ├── docker-compose.yaml
 └── model/
 ├── classicmodels.sql
 └── views.sql
-
-
+```
 ### 🔹 `classicmodels.sql`
+
 Contiene el esquema completo de la base de datos ClassicModels, incluyendo:
+
 - Tablas principales (`customers`, `orders`, `employees`, `products`, `offices`, etc.)
 - Relaciones entre entidades (claves foráneas)
 - Datos iniciales de prueba
 
 ### 🔹 `views.sql`
+
 Define todas las **vistas** analíticas utilizadas en el proyecto.  
 Estas vistas permiten obtener información filtrada, resumida o combinada de múltiples tablas, simplificando el análisis de los datos.
 
 ### 🔹 `docker-compose.yaml`
+
 Archivo de configuración que define y orquesta los servicios del entorno:
 
 - **MySQL 8.0**: base de datos principal, donde se cargan los archivos `.sql` automáticamente.
@@ -54,7 +57,6 @@ Datos: nombre de la empresa, nombre completo del contacto, teléfono y ubicació
 
 Beneficio: seguridad y simplicidad al ocultar información financiera innecesaria.
 
-
 ## 2️⃣ Vista_Pedidos_Pendientes
 
 Propósito: identificar productos o pedidos que aún no han sido enviados.
@@ -71,9 +73,7 @@ Datos: ciudad, número de empleados, monto total de ventas.
 
 Beneficio: análisis consolidado de rendimiento por ubicación.
 
-
 ## 4️⃣ Vista_Ventas_x_Empleado y Vista_Promedio_Oficina
-
 
 Propósito: detectar oficinas con bajo rendimiento en relación al promedio global de ventas por empleado.
 
@@ -89,9 +89,7 @@ Estructura: vista anidada, donde una filtra por stock y la otra selecciona el pr
 
 Beneficio: soporte para decisiones de reposición e inversión en productos de alto valor.
 
-
 ## 6️⃣ Vista_Max_x_Pedido y Vista_Max_x_Cliente
-
 
 Propósito: analizar clientes con mayores gastos en productos individuales.
 
